@@ -1,8 +1,13 @@
+require 'sinatra'
 require 'nokogiri'
 require 'open-uri'
 
-# baixagram
+get '/' do
+    erb :index
+end
 
+# baixagram
+=begin
 begin
   ARGV.each do|insta_url|
     insta = Nokogiri::HTML(open(insta_url))
@@ -21,3 +26,4 @@ begin
 rescue
   puts "\nAlgo muito estranho tá acontecendo aqui... fale com o doido do lado"
 end
+=end
