@@ -1,3 +1,5 @@
-$ = document.getElementById;
+$ = function(id) { return document.getElementById(id); };
 
-$('urls').onchange(function() { alert('asd') });
+$('urls').oninput = function() {
+    document.getElementsByTagName('footer')[0].textContent = $('urls').value;
+};
