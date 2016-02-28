@@ -1,3 +1,5 @@
-$('#urls').on('input', function() {
-	$('footer')[0].textContent = $('#urls').val();
-});
+(function(){
+	$('#urls').on('input', function() {
+		console.log(this.value);
+	});
+})();
