@@ -4,7 +4,7 @@
 <head>
   <title>baixagram</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
 </head>
 
 <body>
@@ -12,14 +12,15 @@
     <img src="polaroid.svg" class="center polaroid">
     <h1 class="center">baixagram</h1>
   </header>
-  <div role="main">
-    <form class="pure-form">
-      <div class="pure-u-1">
+  <section>
+    <div role="main" class="pure-g">
+      <form class="pure-form">
         <input id="urls" class="pure-input-2-3 pure-input-rounded" type="text" placeholder="ex.: http://instagram.com/p/ruCQ7wgsL1" />
-      </div>
-    </form>
-  </div>
-  <footer class="center">
+      </form>
+      <div class="well list"></div>
+    </div>
+  </section>
+  <footer class="center light-bg">
     <span>Made with ♥ by <a href="//github.com/mstred">@mstred</a></span>
   </footer>
   <script type="text/javascript" src="zepto.min.js"></script>
