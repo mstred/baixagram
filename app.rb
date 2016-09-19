@@ -1,11 +1,13 @@
 require 'sinatra'
-require 'nokogiri'
 require 'open-uri'
+require 'nokogiri'
+require 'json'
 
 not_found do erb :fof end
 
 get '/' do erb :index end
 
-get '/images' do |arg|
-  
+get '/images' do
+  res = params
+	res.to_json
 end
