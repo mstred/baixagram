@@ -1,12 +1,16 @@
 (function() {
 	var $urls = $('#urls'),
 		$list = $('section .list'),
-		instamatic = function(value) {
-			console.log(value);
-		}
-		onInputChange = function() {
-			instamatic(this.value);
-		};
+		urlRegEx = /http(s)?\:\/\/(www.)?instagram\.com\/p\/[A-Za-z0-9]+/gim;
 
-	$urls.on('input', onInputChange);
+	$urls.on('blur', function() {
+		var value = this.value;
+		var urls = (typeof value === 'string' && value.match(urlRegEx) || []);
+
+		if (urls && urls.length > 0) {
+			$.getJSON('/images', {urls: urls}, function(response) {
+				console.log(response);
+			});
+		}
+	});
 })();
