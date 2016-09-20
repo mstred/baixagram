@@ -9,7 +9,11 @@
 
 		if (urls && urls.length > 0) {
 			$.getJSON('/images', {urls: urls}, function(response) {
-				console.log(response);
+				if (response && response.length > 0) {
+					$.each(response, function(i, o) {
+						$list.append($('img').attr('src', o));
+					});
+				}
 			});
 		}
 	});
