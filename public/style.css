@@ -49,9 +49,18 @@ body > footer > span > a {
   text-decoration: none;
 }
 
+body > section {
+  margin-bottom: 4rem;
+}
+
 img.polaroid {
   margin: -2rem auto -3rem;
   width: 16rem;
+}
+
+img.instant {
+  max-width: 100%;
+  margin: 0.25rem auto;
 }
 
 section .well:empty {
