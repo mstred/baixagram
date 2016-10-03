@@ -13,7 +13,8 @@
 			$.getJSON('/images', {urls: urls}, function(response) {
 				if (response && response.length > 0) {
 					$list.append($.map(response, function(o) {
-						return $('<img>').attr({src: o, class: 'block instant'});
+						$img = $('<img>').attr({src: o, class: 'block instant'});
+						return $('<a>').attr({href: o, download: ''}).append($img);
 					}));
 				}
 			});
